@@ -54,7 +54,7 @@ export default function Tentative() {
         >
           <span>Milano</span>
           <span className="tnt-rule" aria-hidden />
-          <span>7 Novembre 2026</span>
+          <span>19 Dicembre 2026</span>
         </motion.div>
       </section>
 

@@ -40,7 +40,7 @@ export default function Cover({ variant }: CoverProps) {
 
         <div className="cover-date-row">
           <span className="cover-rule" />
-          <p className="cover-date">7 Novembre 2026</p>
+          <p className="cover-date">19 Dicembre 2026</p>
           <span className="cover-rule" />
         </div>
 

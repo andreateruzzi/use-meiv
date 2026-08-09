@@ -4,7 +4,7 @@ Linee guida per lo sviluppo del sito web del matrimonio di Mariavittoria e Andre
 
 ## Informazioni Generali
 - **Nome Progetto:** Meriolli
-- **Data Matrimonio:** 7 Novembre 2026
+- **Data Matrimonio:** 19 Dicembre 2026
 - **Luogo Cerimonia:** Chiesa di Ca' Granda
 - **Hosting:** Vercel (Preferred for advanced features and performance)
 

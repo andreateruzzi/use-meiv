@@ -4,7 +4,7 @@ import './Ceremony.css';
 export default function Ceremony() {
   const websiteUrl = window.location.origin + window.location.pathname + '#cerimonia';
   const calendarDetails = `Vi aspettiamo per celebrare il nostro matrimonio!%0A%0ATutte le info sul sito: ${websiteUrl}`;
-  const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Cerimonia+Matrimonio+Mariavittoria+e+Andrea&dates=20261107T100000/20261107T113000&ctz=Europe/Rome&details=${calendarDetails}&location=Chiesa+di+San+Ferdinando,+Via+Ulisse+Gobbi+5,+Milano`;
+  const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Cerimonia+Matrimonio+Mariavittoria+e+Andrea&dates=20261219T100000/20261219T113000&ctz=Europe/Rome&details=${calendarDetails}&location=Chiesa+di+San+Ferdinando,+Via+Ulisse+Gobbi+5,+Milano`;
 
   return (
     <div id="cerimonia" className="section-container ceremony-section">

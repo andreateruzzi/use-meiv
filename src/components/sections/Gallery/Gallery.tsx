@@ -16,36 +16,8 @@ export default function Gallery() {
     };
   }, [selectedImage]);
 
-  // Solo le foto presenti nella cartella Drive "Foto sito"
   const images = [
-    '/images/Foto sito/IMG_1171_Original.jpg',
-    '/images/Foto sito/IMG_3507.jpg',
-    '/images/Foto sito/IMG_3607.jpg',
-    '/images/Foto sito/IMG_3915.jpg',
-    '/images/Foto sito/IMG_4208.jpg',
-    '/images/Foto sito/IMG_5928.jpg',
-    '/images/Foto sito/IMG_6493.jpg',
-    '/images/Foto sito/IMG_6950.jpg',
-    '/images/Foto sito/IMG_7102.jpg',
-    '/images/Foto sito/IMG_7431.jpg',
-    '/images/Foto sito/IMG_7537.jpg',
-    '/images/Foto sito/IMG_7675.jpg',
-    '/images/Foto sito/IMG_7686.jpg',
-    '/images/Foto sito/IMG_7809.jpg',
-    '/images/Foto sito/IMG_7933.jpg',
-    '/images/Foto sito/IMG_8108.jpg',
-    '/images/Foto sito/IMG_8238.jpg',
-    '/images/Foto sito/whatsapp-20260713.jpg',
-    '/images/Foto sito/whatsapp-20260716.jpg',
-    '/images/Foto sito/whatsapp-20260720-1.jpg',
-    '/images/Foto sito/0875802b-e11c-462b-b627-8f8140d33b41.jpg',
-    '/images/Foto sito/14b2843e-3262-4b86-9a97-24364543c7b9.jpg',
-    '/images/Foto sito/375afe23-948d-4a7f-9350-3ba081ca97fe.jpg',
-    '/images/Foto sito/4ad964b1-c228-44e5-a519-75278a0d86a2.jpg',
-    '/images/Foto sito/5272FA54-3883-4FF2-A9D9-3BD1AE2C320D.jpg',
-    '/images/Foto sito/8777a7fa-b2a3-4031-9081-a716879135c0.jpg',
-    '/images/Foto sito/98223a04-5b52-4e71-802d-52d540486220.jpg',
-    '/images/Foto sito/cd4df773-5911-4343-ae64-38762aa80a89.jpg'
+    '/images/andy_diouf.jpg'
   ];
 
   const shuffledImages = useMemo(() => {

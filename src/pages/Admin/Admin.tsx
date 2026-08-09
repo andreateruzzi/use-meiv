@@ -204,7 +204,7 @@ export default function Admin() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === 'amore') {
+    if (password === 'caimano') {
       setIsAuthenticated(true);
     } else {
       alert('Password errata');

@@ -23,7 +23,7 @@ export default function Cover({ variant }: CoverProps) {
     <div className="section-container cover-section">
       <div className="cover-image-wrapper">
         <img
-          src="/images/Foto sito/IMG_7686.jpg"
+          src="/images/andy_diouf.jpg"
           alt="Mariavittoria e Andrea"
           className="cover-image"
         />

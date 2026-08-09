@@ -1,0 +1,602 @@
+.registry-section {
+  background-color: var(--color-background);
+}
+
+.registry-card {
+  background: var(--color-card);
+  border: var(--card-border);
+  padding: clamp(2rem, 6vw, 4rem);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  max-width: 900px;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.registry-intro {
+  text-align: center;
+  font-size: clamp(1rem, 2.4vw, 1.15rem);
+  color: var(--color-text);
+  margin: 0 auto 3.5rem;
+  max-width: 720px;
+}
+
+.registry-options {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.registry-option {
+  flex: 1;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registry-option:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-soft);
+}
+
+.option-icon {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+.registry-option h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.iban {
+  font-family: monospace;
+  font-size: 1rem;
+  background: var(--color-accent-soft);
+  color: var(--color-primary);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  word-break: break-all;
+}
+
+.bonifico-details p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.bonifico-details .iban {
+  margin-top: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.ecommerce-section {
+  margin-top: 4rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 3rem;
+}
+
+.ecommerce-title {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--color-primary);
+  margin-bottom: 2.5rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-soft);
+}
+
+.product-image-container {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--color-accent-soft);
+}
+
+.product-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image-container img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+
+.product-info h4 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.product-price {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.product-progress-container {
+  width: 100%;
+  height: 6px;
+  background-color: var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.product-progress-bar {
+  height: 100%;
+  background-color: var(--color-primary);
+  transition: width 0.5s ease-out;
+}
+
+.product-progress-text {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.product-card.completed {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.product-card.completed:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.product-completed-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: bold;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--color-accent-soft);
+}
+
+.loading-registry {
+  text-align: center;
+  padding: 3rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* Modal */
+.registry-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.registry-modal-content {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.registry-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+}
+
+.registry-modal-close:hover {
+  background: var(--color-primary);
+}
+
+.modal-header {
+  position: relative;
+  height: 200px;
+  background-color: var(--color-accent-soft);
+}
+
+.modal-image-btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+  position: relative;
+}
+
+.modal-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-zoom-hint {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.modal-header-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.5rem 1rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: white;
+}
+
+.modal-header-text h3 {
+  color: white;
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.modal-price {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-accent-light);
+}
+
+.modal-body {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.input-with-symbol {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 1rem;
+  color: var(--color-muted);
+}
+
+.input-with-symbol input {
+  padding-left: 2rem !important;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-cancel,
+.btn-continue {
+  flex: 1;
+  padding: 0.85rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-cancel {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn-cancel:hover {
+  background: var(--color-border);
+}
+
+.btn-continue {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  border: 1px solid var(--color-accent);
+}
+
+.btn-continue:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Dettagli e link prodotto (step 1) */
+.modal-details {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+}
+
+.modal-product-link {
+  align-self: flex-start;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.15rem;
+  transition: color 0.3s ease;
+}
+
+.modal-product-link:hover {
+  color: var(--color-primary);
+}
+
+.modal-step-2 p {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.modal-step-2 .modal-actions {
+  margin-top: 1.25rem;
+}
+
+/* Step 3: conferma avvenuta */
+.modal-step-3 {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.modal-success-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.modal-step-3 h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.modal-step-3 p {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.btn-close-success {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Zoom immagine a schermo intero */
+.product-zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  cursor: zoom-out;
+}
+
+.product-zoom-overlay img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-step-2 p strong {
+  color: var(--color-primary);
+}
+
+.bonifico-box {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.bonifico-box p {
+  margin-bottom: 0.5rem;
+  color: var(--color-muted);
+}
+
+.bonifico-box p strong {
+  color: var(--color-primary);
+}
+
+.bonifico-box .iban {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.btn-copy-modal {
+  width: 100%;
+  padding: 1rem;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-copy-modal:hover {
+  background: var(--color-primary);
+}
+
+.btn-back {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: transparent;
+  border: none;
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.btn-back:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .registry-options {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

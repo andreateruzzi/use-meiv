@@ -1,0 +1,146 @@
+.ceremony-section {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  background-color: var(--color-surface);
+}
+
+.ceremony-image-wrapper {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: clamp(2.5rem, 6vw, 5rem);
+  background-color: var(--color-surface);
+}
+
+.ceremony-illustration {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  /* Flattened white paper + multiply = the sketch melts into the page */
+  mix-blend-mode: multiply;
+}
+
+.ceremony-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2.5rem, 6vw, 4.5rem);
+  background-color: var(--color-surface);
+}
+
+.ceremony-details h3 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 0.9rem;
+  color: var(--color-primary);
+}
+
+.ceremony-address {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  color: var(--color-muted);
+  margin-bottom: 1.1rem;
+  line-height: 1.5;
+}
+
+.ceremony-time {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--color-accent);
+  margin-bottom: 2.25rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.ceremony-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-maps {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.btn-maps:hover {
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-calendar {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-calendar:hover {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.parking-info {
+  background: var(--color-background);
+  border: var(--card-border);
+  padding: 1.75rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  border-left: 4px solid var(--color-accent);
+}
+
+.parking-info h4 {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.parking-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+@media (max-width: 900px) {
+  .ceremony-section {
+    flex-direction: column;
+  }
+  .ceremony-image-wrapper {
+    min-height: 0;
+    padding: clamp(2.5rem, 8vw, 3.5rem) 1.5rem 1rem;
+    gap: 0.5rem;
+  }
+  .ceremony-illustration {
+    max-width: 300px;
+  }
+  .ceremony-content {
+    min-height: auto;
+    padding: clamp(2rem, 8vw, 3.5rem) clamp(1.5rem, 6vw, 2.5rem) clamp(2.5rem, 9vw, 4rem);
+  }
+}

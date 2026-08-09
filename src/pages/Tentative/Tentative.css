@@ -1,0 +1,243 @@
+/* ============================================================
+   /tentative — dossier minimale
+   Palette monocroma: carta calda + inchiostro. Un solo font
+   display (Bodoni Moda), etichette in Inter. Filetti sottili.
+   ============================================================ */
+
+.tnt {
+  --tnt-paper: #f7f5f1;
+  --tnt-ink: #1b1a17;
+  --tnt-faded: #8b867c;
+  --tnt-hairline: rgba(27, 26, 23, 0.16);
+
+  background: var(--tnt-paper);
+  color: var(--tnt-ink);
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- topbar ---------- */
+.tnt-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem clamp(1.4rem, 4vw, 3rem);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.tnt-mark,
+.tnt-topdate {
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  color: var(--tnt-ink);
+}
+
+/* ---------- hero ---------- */
+.tnt-hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 1.5rem 4rem;
+}
+
+.tnt-eyebrow {
+  font-size: clamp(0.66rem, 1.8vw, 0.78rem);
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--tnt-faded);
+  margin-bottom: clamp(2rem, 5vh, 3.5rem);
+}
+
+.tnt-names {
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  font-size: clamp(3.4rem, 14vw, 9rem);
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--tnt-ink);
+}
+
+.tnt-amp {
+  font-style: italic;
+  font-size: 0.36em;
+  line-height: 1.6;
+  color: var(--tnt-faded);
+}
+
+.tnt-hero-meta {
+  margin-top: clamp(2.5rem, 6vh, 4rem);
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  font-size: clamp(0.72rem, 2vw, 0.82rem);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--tnt-ink);
+}
+
+.tnt-rule {
+  width: clamp(2.5rem, 8vw, 5rem);
+  height: 1px;
+  background: var(--tnt-hairline);
+}
+
+/* ---------- quote ---------- */
+.tnt-quote {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: clamp(5rem, 14vh, 9rem) clamp(1.5rem, 5vw, 2.5rem);
+  position: relative;
+}
+
+.tnt-quote-mark {
+  display: block;
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(5rem, 12vw, 8rem);
+  line-height: 0.6;
+  color: var(--tnt-hairline);
+  margin-bottom: 1rem;
+}
+
+.tnt-quote blockquote p {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(1.25rem, 3.2vw, 1.7rem);
+  line-height: 1.75;
+  font-weight: 400;
+  margin-bottom: 1.8em;
+}
+
+.tnt-quote-final {
+  font-style: italic;
+}
+
+.tnt-quote blockquote footer {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--tnt-faded);
+}
+
+.tnt-quote blockquote footer::before {
+  content: '';
+  display: inline-block;
+  width: 2.2rem;
+  height: 1px;
+  background: var(--tnt-hairline);
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+/* ---------- dossier ---------- */
+.tnt-dossier {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 8vh, 6rem) clamp(1.5rem, 5vw, 2.5rem) clamp(5rem, 12vh, 8rem);
+}
+
+.tnt-dossier-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--tnt-faded);
+  margin-bottom: 3.5rem;
+}
+
+.tnt-row {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 1rem;
+  padding: 2.4rem 0;
+  border-top: 1px solid var(--tnt-hairline);
+}
+
+.tnt-row:last-child {
+  border-bottom: 1px solid var(--tnt-hairline);
+}
+
+.tnt-num {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 0.95rem;
+  color: var(--tnt-faded);
+  padding-top: 0.35rem;
+}
+
+.tnt-row-body h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: var(--tnt-ink);
+  margin-bottom: 0.7rem;
+}
+
+.tnt-row-body p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--tnt-faded);
+  margin-bottom: 1.1rem;
+}
+
+.tnt-row-body a {
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--tnt-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--tnt-ink);
+  padding-bottom: 0.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.tnt-row-body a:hover {
+  opacity: 0.55;
+}
+
+/* ---------- footer ---------- */
+.tnt-footer {
+  text-align: center;
+  padding: 0 1.5rem clamp(4rem, 10vh, 7rem);
+}
+
+.tnt-footer-rule {
+  display: block;
+  width: 1px;
+  height: clamp(3rem, 8vh, 5rem);
+  background: var(--tnt-hairline);
+  margin: 0 auto 2.2rem;
+}
+
+.tnt-footer-names {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+  margin-bottom: 0.7rem;
+}
+
+.tnt-footer-note {
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--tnt-faded);
+}
+
+/* ---------- mobile ---------- */
+@media (max-width: 600px) {
+  .tnt-row {
+    grid-template-columns: 3rem 1fr;
+  }
+}

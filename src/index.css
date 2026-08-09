@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ============================================================
+   CUSTOM FONTS & TOKENS
+   ============================================================ */
+@font-face {
+  font-family: 'Tan Angleton';
+  src: local('Times New Roman'); /* Fallback temporaneo finché non viene caricato il file */
+}
+
+:root {
+  /* Text */
+  --color-primary: #2e3a34;      /* headings, strong text */
+  --color-text: #4b4f49;         /* body copy */
+  --color-muted: #8a8d84;        /* secondary text */
+
+  /* Accents */
+  --color-accent: #6e8b7b;       /* sage — buttons, rules */
+  --color-accent-2: #9cb29f;     /* lighter sage */
+  --color-accent-soft: #e4ebe2;  /* tinted backgrounds */
+  --color-on-accent: #ffffff;
+
+  /* Surfaces */
+  --color-background: #faf7f2;    /* page background */
+  --color-surface: #ffffff;       /* alternating sections */
+  --color-card: #ffffff;          /* cards / panels */
+  --card-border: 1px solid rgba(46, 58, 52, 0.08);
+  --color-border: rgba(46, 58, 52, 0.1);
+
+  /* Hero / over-image text */
+  --color-cover-text: #ffffff;
+  --cover-overlay: linear-gradient(to bottom, rgba(20, 26, 23, 0.25), rgba(20, 26, 23, 0.6));
+
+  /* Effects */
+  --shadow-card: 0 18px 50px rgba(46, 58, 52, 0.08);
+  --shadow-soft: 0 8px 24px rgba(46, 58, 52, 0.06);
+  --radius: 16px;
+
+  /* Type */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-script: 'Alex Brush', cursive;
+  --font-body: 'Inter', sans-serif;
+  --font-bodoni: 'Bodoni Moda', serif;
+  --font-tan: 'Tan Angleton', serif;
+  --names-weight: 300;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--color-primary);
+  line-height: 1.15;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+/* Themed scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 10px;
+  border: 2px solid var(--color-background);
+}
+
+/* ------------------------------------------------------------
+   Shared layout primitives
+   ------------------------------------------------------------ */
+.section-container {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 5vw, 4rem);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Shared section heading used across sections */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  position: relative;
+  letter-spacing: 0.01em;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+.section-title.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Decorative ornament: a thin rule with a centered diamond.
+   Reused on covers and the landing page. */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  color: var(--color-accent);
+}
+
+.ornament::before,
+.ornament::after {
+  content: '';
+  height: 1px;
+  width: clamp(2.5rem, 10vw, 5rem);
+  background: currentColor;
+  opacity: 0.6;
+}
+
+.ornament span {
+  font-size: 0.7rem;
+  transform: rotate(45deg);
+  display: inline-block;
+}

@@ -1,0 +1,131 @@
+.rsvp-section {
+  background-color: var(--color-background);
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 5vw, 4rem);
+}
+
+.rsvp-card {
+  background: var(--color-card);
+  border: var(--card-border);
+  padding: clamp(2rem, 6vw, 4rem);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  max-width: 700px;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.rsvp-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+.form-group label {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background-color: var(--color-background);
+  transition: all 0.3s ease;
+  color: var(--color-text);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-muted);
+  opacity: 0.7;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 22%, transparent);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.rsvp-form .btn-rsvp {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1rem;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.rsvp-form .btn-rsvp:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  transform: translateY(-2px);
+}
+
+.rsvp-form .btn-rsvp:disabled {
+  background: var(--color-muted);
+  color: var(--color-surface);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.rsvp-error {
+  background-color: #fdecec;
+  color: #b3261e;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.rsvp-success-message {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

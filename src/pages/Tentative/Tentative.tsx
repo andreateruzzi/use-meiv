@@ -1,0 +1,165 @@
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import './Tentative.css';
+
+/**
+ * /tentative — proposta di design nascosta.
+ * Concept: la citazione di C.S. Lewis parla di una casa che viene
+ * ricostruita in palazzo. Il sito diventa quindi un "dossier di
+ * cantiere": tipografia architettonica, filetti sottili, schede
+ * numerate. Minimale, monocromo, editoriale.
+ */
+
+const fadeUp = {
+  initial: { opacity: 0, y: 26 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-80px' },
+  transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] as const },
+};
+
+export default function Tentative() {
+  return (
+    <div className="tnt">
+      {/* header minimale fisso */}
+      <header className="tnt-topbar">
+        <span className="tnt-mark">M·L</span>
+        <span className="tnt-topdate">07.11.2026</span>
+      </header>
+
+      {/* ------ Atto I — monumento tipografico ------ */}
+      <section className="tnt-hero">
+        <motion.p
+          className="tnt-eyebrow"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 0.2 }}
+        >
+          Una casa in costruzione
+        </motion.p>
+        <motion.h1
+          className="tnt-names"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+        >
+          Maria
+          <span className="tnt-amp">&amp;</span>
+          Lorenzo
+        </motion.h1>
+        <motion.div
+          className="tnt-hero-meta"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 0.5 }}
+        >
+          <span>Milano</span>
+          <span className="tnt-rule" aria-hidden />
+          <span>7 Novembre 2026</span>
+        </motion.div>
+      </section>
+
+      {/* ------ Atto II — la citazione ------ */}
+      <section className="tnt-quote">
+        <motion.span className="tnt-quote-mark" {...fadeUp} aria-hidden>
+          “
+        </motion.span>
+        <motion.blockquote {...fadeUp}>
+          <p>
+            Immaginate di essere una casa, una casa vivente; e viene Dio a
+            ricostruirla. Dapprima, forse, capite quel che sta facendo […] Ma
+            ecco che egli comincia a mettere la casa sottosopra, a
+            sconquassarla in modo orripilante. La spiegazione è che egli sta
+            costruendo una casa tutta diversa da quella che avevate in mente
+            voi: creando qui un&rsquo;ala nuova, là aggiungendo un piano,
+            innalzando torri, aprendo cortili.
+          </p>
+          <p className="tnt-quote-final">
+            Pensavate di diventare una casetta ammodo: ma lui sta costruendo
+            un palazzo.
+          </p>
+          <footer>C.S. Lewis</footer>
+        </motion.blockquote>
+      </section>
+
+      {/* ------ Atto III — scheda di progetto ------ */}
+      <section className="tnt-dossier">
+        <motion.h2 className="tnt-dossier-title" {...fadeUp}>
+          Il progetto
+        </motion.h2>
+
+        <motion.div className="tnt-row" {...fadeUp}>
+          <span className="tnt-num">01</span>
+          <div className="tnt-row-body">
+            <h3>Cerimonia</h3>
+            <p>
+              Chiesa di San Martino in Niguarda
+              <br />
+              Piazza Belloveso 5, Milano — ore 11:00
+            </p>
+            <a
+              href="https://maps.app.goo.gl/8nw5zH47DqodtRcy8"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Indicazioni ↗
+            </a>
+          </div>
+        </motion.div>
+
+        <motion.div className="tnt-row" {...fadeUp}>
+          <span className="tnt-num">02</span>
+          <div className="tnt-row-body">
+            <h3>Ricevimento</h3>
+            <p>
+              Castello Visconteo
+              <br />
+              Piazza Gen. D. Perrucchetti 3, Cassano d&rsquo;Adda
+            </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Castello+Visconteo%2C+Piazza+Generale+Domenico+Perrucchetti+3%2C+Cassano+d%27Adda"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Indicazioni ↗
+            </a>
+          </div>
+        </motion.div>
+
+        <motion.div className="tnt-row" {...fadeUp}>
+          <span className="tnt-num">03</span>
+          <div className="tnt-row-body">
+            <h3>Regalo</h3>
+            <p>
+              Un mattone per la nuova casa,
+              <br />
+              o un tratto di strada verso il Messico.
+            </p>
+            <Link to="/lista-nozze">La lista ↗</Link>
+          </div>
+        </motion.div>
+
+        <motion.div className="tnt-row" {...fadeUp}>
+          <span className="tnt-num">04</span>
+          <div className="tnt-row-body">
+            <h3>Presenza</h3>
+            <p>
+              Ogni palazzo ha bisogno dei suoi ospiti:
+              <br />
+              fateci sapere se ci sarete.
+            </p>
+            <Link to="/#rsvp">Conferma ↗</Link>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* ------ chiusura ------ */}
+      <footer className="tnt-footer">
+        <motion.div {...fadeUp}>
+          <span className="tnt-footer-rule" aria-hidden />
+          <p className="tnt-footer-names">Maria &amp; Lorenzo</p>
+          <p className="tnt-footer-note">cantiere aperto dal 7 · 11 · 2026</p>
+        </motion.div>
+      </footer>
+    </div>
+  );
+}

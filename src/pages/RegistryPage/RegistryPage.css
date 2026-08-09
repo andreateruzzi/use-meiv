@@ -1,0 +1,36 @@
+.registry-page-wrapper {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  padding-bottom: 4rem;
+}
+
+.registry-page-header {
+  padding: 1.5rem 2rem;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-back-home {
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.btn-back-home:hover {
+  color: var(--color-primary);
+}
+
+/* Aggiustiamo un po' il padding della section all'interno della pagina separata */
+.registry-page-wrapper .registry-section {
+  padding-top: 3rem;
+}

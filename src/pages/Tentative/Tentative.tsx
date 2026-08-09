@@ -120,9 +120,9 @@ export default function Tentative() {
           <div className="tnt-row-body">
             <h3>Regalo</h3>
             <p>
-              Un mattone per la nuova casa,
+              Per chi volesse regalare un cuscino, un pezzo di tetto
               <br />
-              o un tratto di strada verso il Messico.
+              o un tratto di strada verso lo Sri Lanka e le Maldive.
             </p>
             <Link to="/lista-nozze">La lista ↗</Link>
           </div>

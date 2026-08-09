@@ -32,8 +32,8 @@ export default function RegistryLink() {
         <h2 className="section-title text-center">Regalo</h2>
         
         <p className="registry-link-intro">
-          Se desideri partecipare alla realizzazione della nostra nuova casa o contribuire 
-          a rendere il nostro viaggio di nozze in Messico ancora più bello, puoi farlo nei seguenti modi:
+          Se desideri contribuire 
+          a rendere il nostro viaggio di nozze in Sri Lanka e Maldive ancora più bello, puoi farlo nei seguenti modi:
         </p>
 
         <div className="registry-options">
@@ -56,7 +56,7 @@ export default function RegistryLink() {
             className="btn-go-registry" 
             onClick={() => navigate('/lista-nozze')}
           >
-            Lista Nozze
+            Lista Esperienze
           </button>
         </div>
       </motion.div>

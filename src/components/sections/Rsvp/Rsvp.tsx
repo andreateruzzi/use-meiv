@@ -8,7 +8,7 @@ export default function Rsvp() {
   const [error, setError] = useState(false);
 
   // Actual URL from user's Google Apps Script setup
-  const SCRIPT_URL = ''; // DA INSERIRE: NUOVO URL APPS SCRIPT
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwljgrnBJ_Ya8SBnfrFAJtftzLnuAX77pb7kn55-IrThKvwSCfdQHid7S2491U3sM91/exec';
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

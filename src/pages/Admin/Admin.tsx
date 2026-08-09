@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './Admin.css';
 
-const SCRIPT_URL = ''; // DA INSERIRE: NUOVO URL APPS SCRIPT
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwljgrnBJ_Ya8SBnfrFAJtftzLnuAX77pb7kn55-IrThKvwSCfdQHid7S2491U3sM91/exec';
 const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1w7fiJ2FaDpgvGUQB745WTj52wB4Mw38dKRL5NRpizxA/edit'; // foglio "RSVP matrimonio"
 
 // La foto viene compressa lato client e salvata come data-URL (base64)

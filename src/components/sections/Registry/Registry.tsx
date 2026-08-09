@@ -9,7 +9,7 @@ interface RegistryProps {
 
 const IBAN = 'IT78 Y034 7501 605C C001 2462 559';
 const INTESTATARIO = 'Mariavittoria e Andrea';
-const SCRIPT_URL = ''; // DA INSERIRE: NUOVO URL APPS SCRIPT
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwljgrnBJ_Ya8SBnfrFAJtftzLnuAX77pb7kn55-IrThKvwSCfdQHid7S2491U3sM91/exec';
 
 // Fallback images in case the user hasn't provided Amazon links yet
 const DEFAULT_IMG = 'https://m.media-amazon.com/images/I/41OvwY2a3rL._AC_SX679_.jpg';

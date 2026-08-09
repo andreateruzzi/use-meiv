@@ -13,13 +13,13 @@ function App() {
   const hostname = window.location.hostname;
   
   // Se l'utente usa il dominio per sola cerimonia
-  const isCerimonia = hostname.includes('mariavittoriaeandrea.click');
+  const isCerimonia = hostname.includes('mariavittoriandrea.click');
 
   return (
     <>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          {/* Mostriamo la versione messa solo se esplicitamente su mariavittoriaeandrea.click */}
+          {/* Mostriamo la versione messa solo se esplicitamente su mariavittoriandrea.click */}
           {isCerimonia ? (
             <Route path="/" element={<VerticalLayout variant="messa" />} />
           ) : (

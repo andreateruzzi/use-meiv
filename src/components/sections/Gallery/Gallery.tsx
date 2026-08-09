@@ -76,7 +76,7 @@ export default function Gallery() {
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.8 }}
       >
-        <p className="gallery-note">Maria &amp; Lorenzo</p>
+        <p className="gallery-note">Mariavittoria &amp; Andrea</p>
         <p className="gallery-footer-date">7 · 11 · 2026</p>
       </motion.div>
 

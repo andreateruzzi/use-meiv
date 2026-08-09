@@ -1,5 +1,5 @@
 /**
- * Backend Google Apps Script — Sito matrimonio Maria & Lorenzo
+ * Backend Google Apps Script — Sito matrimonio Mariavittoria & Andrea
  *
  * COME AGGIORNARE (2 minuti):
  * 1. Apri il foglio Google "RSVP matrimonio" → Estensioni → Apps Script
@@ -212,4 +212,46 @@ function actionRsvp(p) {
     p.altro || '',
   ]);
   return _json({ result: 'success', action: 'rsvp' });
+}
+
+/** ==========================================
+ *  FUNZIONE MAGICA DI SETUP AUTOMATICO
+ *  Esegui questa funzione una sola volta per creare
+ *  tutti i fogli e le colonne necessarie!
+ *  ========================================== */
+function autoSetup() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  
+  // 1. Setup ListaNozze
+  var sheetRegali = ss.getSheetByName(SHEET_REGALI);
+  if (!sheetRegali) {
+    sheetRegali = ss.insertSheet(SHEET_REGALI);
+  }
+  sheetRegali.getRange("A1:H1").setValues([["ID", "Nome", "Prezzo", "Raccolti", "Immagine", "Link", "Dettagli", "PosFoto"]]);
+  sheetRegali.getRange("A1:H1").setFontWeight("bold");
+
+  // 2. Setup Foglio1 (RSVP)
+  var sheetRsvp = ss.getSheetByName(SHEET_RSVP);
+  if (!sheetRsvp) {
+    // Se non esiste Foglio1, magari lo script è stato appena creato e c'è Foglio 1 o Sheet1
+    var defaultSheet = ss.getSheets()[0];
+    if (defaultSheet.getName() !== SHEET_REGALI && defaultSheet.getName() !== SHEET_LOG) {
+      defaultSheet.setName(SHEET_RSVP);
+      sheetRsvp = defaultSheet;
+    } else {
+      sheetRsvp = ss.insertSheet(SHEET_RSVP);
+    }
+  }
+  sheetRsvp.getRange("A1:F1").setValues([["Data", "Nome", "Quanti", "Bambini", "Intolleranze", "Note"]]);
+  sheetRsvp.getRange("A1:F1").setFontWeight("bold");
+
+  // 3. Setup LogDonazioni
+  var sheetLog = ss.getSheetByName(SHEET_LOG);
+  if (!sheetLog) {
+    sheetLog = ss.insertSheet(SHEET_LOG);
+  }
+  sheetLog.getRange("A1:D1").setValues([["Data", "Donatore", "ID Prodotto", "Importo"]]);
+  sheetLog.getRange("A1:D1").setFontWeight("bold");
+
+  SpreadsheetApp.getUi().alert("Setup Completato! I fogli e le colonne sono pronti.");
 }

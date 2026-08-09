@@ -4,7 +4,7 @@ import './Ceremony.css';
 export default function Ceremony() {
   const websiteUrl = window.location.origin + window.location.pathname + '#cerimonia';
   const calendarDetails = `Vi aspettiamo per celebrare il nostro matrimonio!%0A%0ATutte le info sul sito: ${websiteUrl}`;
-  const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Cerimonia+Matrimonio+Maria+e+Lorenzo&dates=20261107T110000/20261107T123000&ctz=Europe/Rome&details=${calendarDetails}&location=Chiesa+di+Niguarda+Ca'+Granda,+Milano`;
+  const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Cerimonia+Matrimonio+Mariavittoria+e+Andrea&dates=20261107T100000/20261107T113000&ctz=Europe/Rome&details=${calendarDetails}&location=Chiesa+di+San+Ferdinando,+Via+Ulisse+Gobbi+5,+Milano`;
 
   return (
     <div id="cerimonia" className="section-container ceremony-section">
@@ -30,13 +30,13 @@ export default function Ceremony() {
       >
         <h2 className="section-title">Cerimonia</h2>
         <div className="ceremony-details">
-          <h3>Chiesa di San Martino in Niguarda</h3>
-          <p className="ceremony-address">Piazza Belloveso, 5, 20162 Milano MI</p>
-          <p className="ceremony-time">Ore 11:00</p>
+          <h3>Chiesa San Ferdinando</h3>
+          <p className="ceremony-address">Via Ulisse Gobbi 5, Milano</p>
+          <p className="ceremony-time">Ore 10:00</p>
           
           <div className="ceremony-actions">
             <a 
-              href="https://maps.app.goo.gl/8nw5zH47DqodtRcy8" 
+              href="https://www.google.com/maps/search/?api=1&query=Chiesa+San+Ferdinando%2C+Via+Ulisse+Gobbi+5%2C+Milano" 
               target="_blank" 
               rel="noreferrer" 
               className="btn-action btn-maps"

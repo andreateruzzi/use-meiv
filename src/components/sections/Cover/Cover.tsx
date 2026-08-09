@@ -24,7 +24,7 @@ export default function Cover({ variant }: CoverProps) {
       <div className="cover-image-wrapper">
         <img
           src="/images/Foto sito/IMG_7686.jpg"
-          alt="Maria e Lorenzo"
+          alt="Mariavittoria e Andrea"
           className="cover-image"
         />
         <div className="cover-overlay"></div>
@@ -36,7 +36,7 @@ export default function Cover({ variant }: CoverProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, ease: 'easeOut' }}
       >
-        <h1 className="cover-names">Maria &amp; Lorenzo</h1>
+        <h1 className="cover-names">Mariavittoria &amp; Andrea</h1>
 
         <div className="cover-date-row">
           <span className="cover-rule" />

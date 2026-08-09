@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import './RegistryLink.css';
 
 const IBAN = 'IT78 Y034 7501 605C C001 2462 559';
-const INTESTATARIO = 'Maria Cheodarci';
+const INTESTATARIO = 'Mariavittoria e Andrea';
 
 export default function RegistryLink() {
   const navigate = useNavigate();

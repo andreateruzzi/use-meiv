@@ -1,6 +1,6 @@
 # Progetto Matrimonio Meriolli
 
-Linee guida per lo sviluppo del sito web del matrimonio di Maria e Lorenzo.
+Linee guida per lo sviluppo del sito web del matrimonio di Mariavittoria e Andrea.
 
 ## Informazioni Generali
 - **Nome Progetto:** Meriolli

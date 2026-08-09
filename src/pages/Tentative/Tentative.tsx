@@ -22,7 +22,7 @@ export default function Tentative() {
     <div className="tnt">
       {/* header minimale fisso */}
       <header className="tnt-topbar">
-        <span className="tnt-mark">M·L</span>
+        <span className="tnt-mark">M·A</span>
         <span className="tnt-topdate">07.11.2026</span>
       </header>
 
@@ -42,9 +42,9 @@ export default function Tentative() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
         >
-          Maria
+          Mariavittoria
           <span className="tnt-amp">&amp;</span>
-          Lorenzo
+          Andrea
         </motion.h1>
         <motion.div
           className="tnt-hero-meta"
@@ -92,12 +92,12 @@ export default function Tentative() {
           <div className="tnt-row-body">
             <h3>Cerimonia</h3>
             <p>
-              Chiesa di San Martino in Niguarda
+              Chiesa San Ferdinando
               <br />
-              Piazza Belloveso 5, Milano — ore 11:00
+              Via Ulisse Gobbi 5, Milano — ore 10:00
             </p>
             <a
-              href="https://maps.app.goo.gl/8nw5zH47DqodtRcy8"
+              href="https://www.google.com/maps/search/?api=1&query=Chiesa+San+Ferdinando%2C+Via+Ulisse+Gobbi+5%2C+Milano"
               target="_blank"
               rel="noreferrer"
             >
@@ -111,12 +111,12 @@ export default function Tentative() {
           <div className="tnt-row-body">
             <h3>Ricevimento</h3>
             <p>
-              Castello Visconteo
+              Villa Esengrini Montalbano
               <br />
-              Piazza Gen. D. Perrucchetti 3, Cassano d&rsquo;Adda
+              Via degli Alpini 5, Varese (Ore 12:00)
             </p>
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Castello+Visconteo%2C+Piazza+Generale+Domenico+Perrucchetti+3%2C+Cassano+d%27Adda"
+              href="https://www.google.com/maps/search/?api=1&query=Villa+Esengrini+Montalbano%2C+Via+degli+Alpini+5%2C+Varese"
               target="_blank"
               rel="noreferrer"
             >
@@ -156,7 +156,7 @@ export default function Tentative() {
       <footer className="tnt-footer">
         <motion.div {...fadeUp}>
           <span className="tnt-footer-rule" aria-hidden />
-          <p className="tnt-footer-names">Maria &amp; Lorenzo</p>
+          <p className="tnt-footer-names">Mariavittoria &amp; Andrea</p>
           <p className="tnt-footer-note">cantiere aperto dal 7 · 11 · 2026</p>
         </motion.div>
       </footer>

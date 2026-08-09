@@ -10,6 +10,6 @@
 
 - **Hosting:** Vercel
 - **Domini Acquistati:**
-    - `mariaelorenzo.click` (Sola cerimonia)
-    - `mariaelorenzo.life` (Cerimonia + Ricevimento)
+    - `mariavittoriaeandrea.click` (Sola cerimonia)
+    - `mariavittoriaeandrea.life` (Cerimonia + Ricevimento)
     - *Soluzione implementata:* Un unico progetto Vercel che legge `window.location.hostname` per mostrare automaticamente la versione corretta (bypassando la Landing Page in produzione).

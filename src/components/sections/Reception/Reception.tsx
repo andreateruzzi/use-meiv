@@ -13,12 +13,12 @@ export default function Reception() {
       >
         <h2 className="section-title">Ricevimento</h2>
         <div className="reception-details">
-          <h3>Castello Visconteo di Cassano d'Adda</h3>
-          <p className="reception-address">Piazza Generale Domenico Perrucchetti, 3, 20062 Cassano d'Adda MI</p>
+          <h3>Villa Esengrini Montalbano</h3>
+          <p className="reception-address">Via degli Alpini 5, Varese (Ore 12:00)</p>
           
           <div className="ceremony-actions">
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Castello+Visconteo%2C+Piazza+Generale+Domenico+Perrucchetti+3%2C+Cassano+d%27Adda"
+              href="https://www.google.com/maps/search/?api=1&query=Villa+Esengrini+Montalbano%2C+Via+degli+Alpini+5%2C+Varese"
               target="_blank"
               rel="noreferrer"
               className="btn-action btn-maps"

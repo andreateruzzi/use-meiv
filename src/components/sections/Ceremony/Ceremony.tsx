@@ -16,7 +16,7 @@ export default function Ceremony() {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <img
-          src="/images/Foto sito/church_sketch.png"
+          src="/images/Foto sito/church_sketch.jpg"
           alt="Illustrazione della chiesa"
           className="ceremony-illustration"
         />

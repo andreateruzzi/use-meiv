@@ -7,7 +7,7 @@ interface RegistryProps {
   variant?: Variant;
 }
 
-const IBAN = 'IT78 Y034 7501 605C C001 2462 559';
+const IBAN = 'IT00 0000 0000 0000 0000 0000 000'; // DA INSERIRE: NUOVO IBAN
 const INTESTATARIO = 'Mariavittoria e Andrea';
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwljgrnBJ_Ya8SBnfrFAJtftzLnuAX77pb7kn55-IrThKvwSCfdQHid7S2491U3sM91/exec';
 

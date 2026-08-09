@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './RegistryLink.css';
 
-const IBAN = 'IT78 Y034 7501 605C C001 2462 559';
+const IBAN = 'IT00 0000 0000 0000 0000 0000 000'; // DA INSERIRE: NUOVO IBAN
 const INTESTATARIO = 'Mariavittoria e Andrea';
 
 export default function RegistryLink() {

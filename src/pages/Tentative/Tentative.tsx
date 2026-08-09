@@ -65,19 +65,9 @@ export default function Tentative() {
         </motion.span>
         <motion.blockquote {...fadeUp}>
           <p>
-            Immaginate di essere una casa, una casa vivente; e viene Dio a
-            ricostruirla. Dapprima, forse, capite quel che sta facendo […] Ma
-            ecco che egli comincia a mettere la casa sottosopra, a
-            sconquassarla in modo orripilante. La spiegazione è che egli sta
-            costruendo una casa tutta diversa da quella che avevate in mente
-            voi: creando qui un&rsquo;ala nuova, là aggiungendo un piano,
-            innalzando torri, aprendo cortili.
+            a mela pena ti vediamo tu sei il sardo di milnao con la motot con tre ruote e la tessera d'azione in quel giorno maledetto sei arrivato col traghetto ora sali sul barcone ti rispedimao a guamaggiore
           </p>
-          <p className="tnt-quote-final">
-            Pensavate di diventare una casetta ammodo: ma lui sta costruendo
-            un palazzo.
-          </p>
-          <footer>C.S. Lewis</footer>
+          <footer>— Ciccio Pasticcio</footer>
         </motion.blockquote>
       </section>
 

@@ -48,8 +48,8 @@ export default function Reception() {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <img
-          src="/images/Foto sito/castello_sketch.png"
-          alt="Illustrazione del castello"
+          src="/images/Foto sito/villa_sketch.jpg"
+          alt="Illustrazione della villa"
           className="reception-illustration"
         />
       </motion.div>
